@@ -59,7 +59,7 @@ class InteractiveRecord
     val = options.values.join("") 
 
     sql = <<-SQL
-      SELECT * FROM #{self.table_name} WHERE #{val} = #{key} 
+      SELECT * FROM #{self.table_name} WHERE #{key} = #{val} 
     SQL
     row = DB[:conn].execute(sql).flatten 
     row 
