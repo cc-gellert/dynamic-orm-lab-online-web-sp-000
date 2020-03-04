@@ -56,7 +56,7 @@ class InteractiveRecord
 
   def self.find_by(options={})
     key = options.keys.to_s 
-    val = options.values 
+    val = options.values.join("") 
     
     binding.pry 
 
