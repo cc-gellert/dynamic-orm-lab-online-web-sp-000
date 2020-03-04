@@ -65,4 +65,3 @@ class InteractiveRecord
     row 
   end
 end
-
