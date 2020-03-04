@@ -59,7 +59,7 @@ class InteractiveRecord
     val = options.values.join(" ") 
     binding.pry 
     sql = <<-SQL
-      SELECT * FROM #{self.table_name} WHERE #{key} = #{val} 
+      SELECT * FROM #{self.table_name} WHERE name = #{val} 
     SQL
     row = DB[:conn].execute(sql)
     row 
