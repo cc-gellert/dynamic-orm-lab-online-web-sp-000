@@ -57,12 +57,11 @@ class InteractiveRecord
   def self.find_by(options={})
     key = options.keys.join(" ") 
     val = options.values.join(" ") 
-
+    binding.pry 
     sql = <<-SQL
       SELECT * FROM #{self.table_name} WHERE #{key} = #{val} 
     SQL
     row = DB[:conn].execute(sql)
-    binding.pry 
     row 
   end
 end
