@@ -61,7 +61,8 @@ class InteractiveRecord
     sql = <<-SQL
       SELECT * FROM #{self.table_name} WHERE #{key} = #{val} 
     SQL
-    row = DB[:conn].execute(sql).flatten 
+    row = DB[:conn].execute(sql).flatten
+    binding.pry 
     row 
   end
 end
