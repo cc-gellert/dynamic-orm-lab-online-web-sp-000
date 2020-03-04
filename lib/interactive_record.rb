@@ -61,7 +61,7 @@ class InteractiveRecord
     binding.pry 
 
     sql = <<-SQL
-      SELECT * FROM #{self.table_name} WHERE #{key} = #{val} 
+      SELECT * FROM #{self.table_name} WHERE #{val} = #{key} 
     SQL
     row = DB[:conn].execute(sql).flatten 
     row 
